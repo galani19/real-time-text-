@@ -122,8 +122,8 @@ COPY --chown=etherpad:etherpad ./pnpm-workspace.yaml ./package.json ./
 
 
 FROM build AS build_git
-ONBUILD COPY --chown=etherpad:etherpad ./.git/HEA[D] ./.git/HEAD
-ONBUILD COPY --chown=etherpad:etherpad ./.git/ref[s] ./.git/refs
+# ONBUILD COPY --chown=etherpad:etherpad ./.git/HEA[D] ./.git/HEAD
+# ONBUILD COPY --chown=etherpad:etherpad ./.git/ref[s] ./.git/refs
 
 FROM build AS build_copy
 
